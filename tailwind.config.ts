@@ -25,11 +25,13 @@ export default {
 			},
 			colors: {
 				warhammer: {
-					gold: '#8B4513',
-					beige: '#DAAF2F',
-					dark: '#3C2414',
-					parchment: '#F5F5DC',
-					blood: '#8B0000'
+					gold: '#FFD700',
+					beige: '#D3D3D3',
+					dark: '#0D1117',
+					parchment: '#1C1C1C',
+					blood: '#8B1538',
+					steel: '#2D3748',
+					shadow: '#0F0F23'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -81,8 +83,9 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			backgroundImage: {
-				'parchment-gradient': 'linear-gradient(135deg, #F5F5DC 0%, #DAAF2F 100%)',
-				'mystical-gradient': 'linear-gradient(135deg, #8B4513 0%, #DAAF2F 50%, #3C2414 100%)'
+				'gothic-gradient': 'linear-gradient(135deg, #0D1117 0%, #1C1C1C 50%, #2D3748 100%)',
+				'blood-gradient': 'linear-gradient(135deg, #8B1538 0%, #0D1117 100%)',
+				'steel-gradient': 'linear-gradient(135deg, #2D3748 0%, #0F0F23 100%)'
 			},
 			keyframes: {
 				'fade-in': {

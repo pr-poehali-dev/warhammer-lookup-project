@@ -10,14 +10,14 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('origins');
 
   const sections = [
-    { id: 'origins', title: 'Происхождения', icon: 'Users', color: 'bg-warhammer-gold' },
-    { id: 'careers', title: 'Карьеры', icon: 'Briefcase', color: 'bg-warhammer-beige' },
-    { id: 'equipment', title: 'Снаряжение', icon: 'Sword', color: 'bg-warhammer-dark' },
-    { id: 'rules', title: 'Правила', icon: 'Book', color: 'bg-warhammer-gold' },
-    { id: 'spells', title: 'Заклинания', icon: 'Sparkles', color: 'bg-warhammer-beige' },
-    { id: 'faith', title: 'Вера', icon: 'Cross', color: 'bg-warhammer-dark' },
-    { id: 'bestiary', title: 'Бестиарий', icon: 'Dragon', color: 'bg-warhammer-gold' },
-    { id: 'world', title: 'Мир', icon: 'Globe', color: 'bg-warhammer-beige' }
+    { id: 'origins', title: 'Происхождения', icon: 'Users', skull: '💀' },
+    { id: 'careers', title: 'Карьеры', icon: 'Briefcase', skull: '⚔️' },
+    { id: 'equipment', title: 'Снаряжение', icon: 'Sword', skull: '🗡️' },
+    { id: 'rules', title: 'Правила', icon: 'Book', skull: '📜' },
+    { id: 'spells', title: 'Заклинания', icon: 'Sparkles', skull: '🔮' },
+    { id: 'faith', title: 'Вера', icon: 'Cross', skull: '⛪' },
+    { id: 'bestiary', title: 'Бестиарий', icon: 'Dragon', skull: '🐲' },
+    { id: 'world', title: 'Мир', icon: 'Globe', skull: '🏰' }
   ];
 
   const sampleData = {
@@ -72,26 +72,34 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-warhammer-parchment via-background to-warhammer-parchment">
-      {/* Header */}
-      <header className="bg-mystical-gradient text-white shadow-xl">
-        <div className="container mx-auto px-6 py-8">
+    <div className="min-h-screen bg-gothic-gradient text-foreground">
+      {/* Gothic Header */}
+      <header className="bg-blood-gradient text-white shadow-2xl border-b-4 border-warhammer-gold relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-warhammer-blood/20 to-transparent animate-pulse"></div>
+        <div className="container mx-auto px-6 py-12 relative z-10">
           <div className="text-center">
-            <h1 className="font-cinzel text-5xl font-bold mb-4 animate-fade-in">
-              WARHAMMER
-            </h1>
-            <h2 className="font-cinzel text-2xl font-semibold mb-2 text-warhammer-beige">
+            <div className="flex justify-center items-center gap-4 mb-6">
+              <span className="text-6xl">💀</span>
+              <h1 className="font-cinzel text-6xl font-bold tracking-wider drop-shadow-lg">
+                WARHAMMER
+              </h1>
+              <span className="text-6xl">💀</span>
+            </div>
+            <h2 className="font-cinzel text-3xl font-semibold mb-4 text-warhammer-gold drop-shadow-md">
               The Old World Roleplay
             </h2>
-            <p className="font-cormorant text-lg italic max-w-2xl mx-auto">
-              Полный справочник по миру Старого Света — от происхождений героев до тайн магии
+            <p className="font-cormorant text-xl italic max-w-3xl mx-auto text-warhammer-beige">
+              В мрачных глубинах Старого Мира нет места героям — есть лишь выжившие
             </p>
+            <div className="mt-6 text-warhammer-blood text-lg font-bold">
+              ⚔️ In the grim darkness of the Old World, there is only WAR ⚔️
+            </div>
           </div>
         </div>
       </header>
 
-      {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-sm sticky top-0 z-40 shadow-md border-b-2 border-warhammer-gold">
+      {/* Dark Navigation */}
+      <nav className="bg-warhammer-dark/95 backdrop-blur-sm sticky top-0 z-40 shadow-xl border-b-2 border-warhammer-steel">
         <div className="container mx-auto px-6 py-4">
           <div className="flex flex-wrap justify-center gap-2">
             {sections.map((section) => (
@@ -100,8 +108,13 @@ const Index = () => {
                 variant={activeSection === section.id ? "default" : "outline"}
                 size="sm"
                 onClick={() => setActiveSection(section.id)}
-                className="font-cormorant font-semibold transition-all hover:scale-105"
+                className={`font-cormorant font-semibold transition-all hover:scale-105 border-warhammer-steel
+                  ${activeSection === section.id 
+                    ? 'bg-warhammer-gold text-warhammer-dark shadow-lg' 
+                    : 'bg-warhammer-shadow hover:bg-warhammer-steel text-warhammer-beige'
+                  }`}
               >
+                <span className="mr-2">{section.skull}</span>
                 <Icon name={section.icon as any} className="w-4 h-4 mr-2" />
                 {section.title}
               </Button>

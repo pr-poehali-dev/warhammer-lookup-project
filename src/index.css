@@ -16,29 +16,29 @@
     --warhammer-parchment: 60 56% 91%;
     --warhammer-blood: 0 100% 27%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: var(--warhammer-parchment);
+    --card-foreground: var(--warhammer-beige);
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
     --primary: var(--warhammer-gold);
-    --primary-foreground: var(--warhammer-parchment);
+    --primary-foreground: var(--warhammer-dark);
 
-    --secondary: var(--warhammer-beige);
-    --secondary-foreground: var(--warhammer-dark);
+    --secondary: var(--warhammer-steel);
+    --secondary-foreground: var(--warhammer-beige);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--warhammer-shadow);
+    --muted-foreground: var(--warhammer-beige);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--warhammer-blood);
+    --accent-foreground: var(--warhammer-beige);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: var(--warhammer-steel);
+    --input: var(--warhammer-shadow);
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
