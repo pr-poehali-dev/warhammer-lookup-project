@@ -1,11 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Merriweather:wght@300;400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 245 245 220; /* Parchment */
+    --foreground: 60 29% 20%; /* Dark brown */
+
+    /* Warhammer theme colors */
+    --warhammer-gold: 25 69% 32%;
+    --warhammer-beige: 51 85% 51%;
+    --warhammer-dark: 30 34% 15%;
+    --warhammer-parchment: 60 56% 91%;
+    --warhammer-blood: 0 100% 27%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -13,11 +22,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--warhammer-gold);
+    --primary-foreground: var(--warhammer-parchment);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--warhammer-beige);
+    --secondary-foreground: var(--warhammer-dark);
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
